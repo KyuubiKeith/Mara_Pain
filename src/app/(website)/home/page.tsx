@@ -1,7 +1,14 @@
 // === === === === === === == Render == === === === === === ===//
 
 export default function Home() {
-	return <div>Hello World From The Home Page</div>;
+	return (
+		<>
+			<p>
+				<i>Tip</i> Abstract all the things! <br />
+				<i>Tip</i> Never forget to save! <br />
+			</p>
+		</>
+	);
 }
 
 // === === === === === === == Render == === === === === === ===//
