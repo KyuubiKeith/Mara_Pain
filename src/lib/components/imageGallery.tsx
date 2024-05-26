@@ -20,14 +20,15 @@ export default function imageGallery({instagramAssets, author}: any) {
 						};
 						filename: string;
 					},
-					i: Key | null | undefined,
+					i: Key,
 				): any => (
 					<Image
 						key={i}
 						src={'https:' + photo.fields.file.url}
-						height={photo.fields.file.details.image.height / 4}
-						width={photo.fields.file.details.image.width / 4}
-						alt={photo.filename}
+						height={photo.fields.file.details.image.height}
+						width={photo.fields.file.details.image.width}
+						alt={photo.fields.file.url}
+						priority
 					/>
 				),
 			)}

@@ -11,6 +11,13 @@ import {useEffect, useRef} from 'react';
 // Smooth Scroll
 import Lenis from '@studio-freight/lenis';
 
+// Framer Motion
+import {motion, AnimatePresence} from 'framer-motion';
+
+// Components
+import Footer from '@/lib/components/global/footer/footer';
+import Header from '@/lib/components/global/header/header';
+
 // === === === === === === == Imports == === === === === === ===//
 
 //
@@ -54,7 +61,50 @@ export default function Template({children}: {children: React.ReactNode}) {
 	// ==================== Lenis Smooth Scroll =====================//
 
 	//
-	return <>{children}</>;
+
+	const key = usePathname();
+	const variants = {
+		hidden: {
+			y: 20,
+			opacity: 0,
+		},
+		enter: {
+			opacity: 1,
+			x: 0,
+			y: 0,
+			transition: {
+				duration: 0.75,
+			},
+		},
+		exit: {
+			opacity: 0,
+			x: 0,
+			y: 20,
+			transition: {
+				duration: 0.75,
+			},
+		},
+	};
+
+	return (
+		<AnimatePresence
+			// initial={false}
+			mode='popLayout'>
+			<motion.main
+				key={key}
+				initial='hidden'
+				animate='enter'
+				exit='exit'
+				variants={variants}
+				// transition={{type: 'linear'}}
+				transition={{ease: 'easeInOut', duration: 0.75}}
+				className='overflow-hidden'>
+				<Header />
+				{children}
+				<Footer />
+			</motion.main>
+		</AnimatePresence>
+	);
 }
 
 // === === === === === === == Render == === === === === === ===//
