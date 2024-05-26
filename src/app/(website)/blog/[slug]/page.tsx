@@ -1,6 +1,7 @@
 // === === === === === === == Imports == === === === === === ===//
 
 // Next JS
+import Link from 'next/link';
 import Image from 'next/image';
 import {notFound} from 'next/navigation';
 
@@ -8,6 +9,9 @@ import {notFound} from 'next/navigation';
 import {client} from '@/lib/components/route';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import {BLOCKS, Document} from '@contentful/rich-text-types';
+
+// Components
+import BlogNavigation from './navigation';
 
 //
 
@@ -36,6 +40,7 @@ export default async function Post({params}: any) {
 
 	//Assign a variable to hold all the returned json data and filter out based on provided params
 	const post = {...blogPost.items[0].fields};
+	// const nextPost = {...blogPost.items[0 + `${i}`].fields};
 
 	// ==================== Query =====================//
 
@@ -50,10 +55,11 @@ export default async function Post({params}: any) {
 	}
 
 	//Data Testing
-	// const searchParams = request.nextUrl.searchParams;
+	// const searchParams = useSearchParams;
 	// const query = URLSearchParams.get('query');
 	// console.log(searchParams);
 	// console.log(post.title);
+	// console.log(params);
 
 	const richTextOptions = {
 		renderNode: {
@@ -71,7 +77,11 @@ export default async function Post({params}: any) {
 
 	return (
 		<article>
-			<h1>Blog Post Title: {post.title}</h1>
+			<nav>
+				<Link href={'/blog'}>Back to blog list.</Link>
+				<h1>Blog Post Title: {post.title}</h1>
+			</nav>
+
 			<p>Blog Post Slug: {post.slug}</p>
 			<p>Blog Post Summary: {post.summary}</p>
 			{post.articleImage ? (
@@ -80,6 +90,7 @@ export default async function Post({params}: any) {
 					height={post.articleImage.fields.file.details.image?.height / 2}
 					width={post.articleImage.fields.file.details.image?.width / 2}
 					alt={post.articleImage.fields.title}
+					priority
 				/>
 			) : (
 				<p>
@@ -90,6 +101,7 @@ export default async function Post({params}: any) {
 			<p>Blog Post Author {post.author?.fields.name}</p>
 			<p>Blog Post Publish Date {post.date}</p>
 			<p>Blog Post Category {post.category}</p>
+			<BlogNavigation />
 		</article>
 	);
 
