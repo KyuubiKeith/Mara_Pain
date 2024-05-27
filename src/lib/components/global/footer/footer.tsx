@@ -1,3 +1,3 @@
 export default function Footer() {
-	return <div>Footer Section</div>;
+	return <div className='👣'>Footer Section</div>;
 }
