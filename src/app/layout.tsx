@@ -1,8 +1,8 @@
+'use client';
 // === === === === === === == Imports == === === === === === ===//
 
-// // Components
-// import Footer from '@/lib/components/global/footer/footer';
-// import Header from '@/lib/components/global/header/header';
+// Store
+import {useTheme} from '@/lib/components/state';
 
 // === === === === === === == Imports == === === === === === ===//
 
@@ -11,9 +11,14 @@
 // === === === === === === == Render == === === === === === ===//
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
+	const {theme}: any = useTheme();
+	// console.log(theme);
+
 	return (
 		<html lang='en'>
-			<body>
+			<body
+				id='📦'
+				className={theme ? '🌑' : '☀️'}>
 				<>
 					{/* <Header /> */}
 					{children}
