@@ -5,6 +5,9 @@
 // NextJS
 import {usePathname} from 'next/navigation';
 
+// Styling
+import '@/lib/styles/blerdCorps.scss';
+
 // React
 import {useEffect, useRef} from 'react';
 
@@ -100,7 +103,7 @@ export default function Template({children}: {children: React.ReactNode}) {
 				transition={{ease: 'easeInOut', duration: 0.75}}
 				className='overflow-hidden'>
 				<Header />
-				{children}
+				<section id='📖'>{children}</section>
 				<Footer />
 			</motion.main>
 		</AnimatePresence>
