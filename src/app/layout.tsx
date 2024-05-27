@@ -4,6 +4,10 @@
 // Store
 import {useTheme} from '@/lib/components/state';
 
+// Components
+import Footer from '@/lib/components/global/footer/footer';
+import Header from '@/lib/components/global/header/header';
+
 // === === === === === === == Imports == === === === === === ===//
 
 //

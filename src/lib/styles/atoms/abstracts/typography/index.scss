@@ -68,10 +68,10 @@
 
 html,
 body {
-	font-family: var(--sohne-light);
+	font-family: var(--google-sans);
 	font-size: var(--body);
 
-	-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+	// -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: auto;
 
@@ -132,5 +132,5 @@ strong {
 }
 
 i {
-	font-family: var(--averta-light);
+	font-family: var(--averta-regular);
 }
