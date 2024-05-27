@@ -1,5 +1,8 @@
 // === === === === === === == Imports == === === === === === ===//
 
+// React
+import useMediaQuery from '../viewPort';
+
 // NextJS
 import Link from 'next/link';
 
@@ -14,8 +17,26 @@ import ThemeToggle from '../theme/themeToggle';
 // === === === === === === == Render == === === === === === ===//
 
 export default function Header({children}: any) {
+	const isMobile = useMediaQuery('(max-width: 768px)');
 	return (
-		<header id='🎩'>
+		<header
+			id='🎩'
+			className={isMobile ? 'mobileView' : 'desktopView'}>
+			{/* {window.innerWidth <= 425 ? (
+				<>
+					<BrandMark />
+					<MenuToggle />
+				</>
+			) : (
+				<>
+					<BrandMark />
+					<MenuToggle />
+					<div className='Utility'>
+						<ThemeToggle />
+					</div>
+				</>
+			)}
+			<Menu /> */}
 			<section id='🧣'>
 				<Link href={'/'}>Landing</Link>
 				<Link href={'/home'}>Home</Link>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@rooks/use-window-size": "^4.11.2",
     "@studio-freight/lenis": "^1.0.42",
     "contentful": "^10.11.3",
     "framer-motion": "^11.2.6",
