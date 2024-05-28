@@ -103,7 +103,7 @@ export default function Template({children}: {children: React.ReactNode}) {
 				transition={{ease: 'easeInOut', duration: 0.75}}
 				className='overflow-hidden'>
 				<Header />
-				<section id='📖'>{children}</section>
+				<article id='📖'>{children}</article>
 				<Footer />
 			</motion.main>
 		</AnimatePresence>
