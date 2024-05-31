@@ -1,0 +1,153 @@
+@use '../../atoms/' as *;
+
+.🍔 {
+	grid-area: Burger;
+	perspective: 600px;
+	width: 35px;
+	height: 35px;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	transition: 0.7s;
+	margin: 10px 10px;
+	-webkit-tap-highlight-color: transparent;
+
+	input {
+		display: none;
+
+		& + div {
+			span {
+				--rotateY: 0deg;
+				--background: var(--💅);
+
+				transform: rotateX(var(--rotateY));
+				transform-style: preserve-3d;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 80%;
+				height: 80%;
+				border-radius: 100%;
+				background: var(--💅);
+				backface-visibility: hidden;
+				transition: transform 1s cubic-bezier(0.2, 0.64, 0.48, 1.24);
+				&:before,
+				&:after {
+					--rotate: 0deg;
+					content: '';
+					position: absolute;
+					width: 10px;
+					height: 2px;
+					border-radius: 1px;
+					top: 50%;
+					left: 50%;
+					background: var(--☀️);
+					backface-visibility: hidden;
+					transform: translate(-50%, -50%) rotate(var(--rotate)) translateZ(7px);
+				}
+				&:first-child {
+					--background: var(--back);
+					filter: invert(0) drop-shadow(0 0 0.3rem var(--💅));
+					&:before {
+						--rotate: -45deg;
+					}
+					&:after {
+						--rotate: 45deg;
+					}
+				}
+				&:last-child {
+					--rotateY: 180deg;
+					&:before {
+						box-shadow:
+							0 -4px 0 var(--☀️),
+							0 4px 0 var(--☀️);
+					}
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+		&:checked + div {
+			span {
+				&:first-child {
+					--rotateY: -180deg;
+				}
+				&:last-child {
+					--rotateY: 0deg;
+				}
+			}
+		}
+	}
+}
+
+.🗞️ {
+	display: none;
+}
+
+.📜 {
+	display: grid;
+	button {
+		& span {
+			--rotateY: 0deg;
+			--background: var(--💅);
+
+			transform: rotateX(var(--rotateY));
+			transform-style: preserve-3d;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 80%;
+			height: 80%;
+			border-radius: 100%;
+			background: var(--💅);
+			backface-visibility: hidden;
+			transition: transform 1s cubic-bezier(0.2, 0.64, 0.48, 1.24);
+			&:before,
+			&:after {
+				--rotate: 0deg;
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 2px;
+				border-radius: 1px;
+				top: 50%;
+				left: 50%;
+				background: var(--☀️);
+				backface-visibility: hidden;
+				transform: translate(-50%, -50%) rotate(var(--rotate)) translateZ(7px);
+			}
+			&:first-child {
+				--background: var(--back);
+				filter: invert(0) drop-shadow(0 0 0.3rem var(--💅));
+				&:before {
+					--rotate: -45deg;
+				}
+				&:after {
+					--rotate: 45deg;
+				}
+			}
+			&:last-child {
+				--rotateY: 180deg;
+				&:before {
+					box-shadow:
+						0 -4px 0 var(--☀️),
+						0 4px 0 var(--☀️);
+				}
+				&:after {
+					display: none;
+				}
+			}
+		}
+		&:checked + div {
+			span {
+				&:first-child {
+					--rotateY: -180deg;
+				}
+				&:last-child {
+					--rotateY: 0deg;
+				}
+			}
+		}
+	}
+}

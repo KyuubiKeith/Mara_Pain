@@ -1,0 +1,90 @@
+$layout-breakpoint-small: 768px;
+
+#🌓 {
+	--button-diameter: 15px;
+	--shape-size: 17px;
+	border: none;
+	outline: none;
+	display: flex;
+	cursor: pointer;
+	border-radius: 50%;
+	position: relative;
+	align-items: center;
+	background-color: transparent;
+	justify-content: center;
+	transition: box-shadow 500ms;
+	font-size: var(--shape-size);
+	width: var(--button-diameter);
+	height: var(--button-diameter);
+	box-shadow: 4px 4px 15px var(--☀️);
+	z-index: 1;
+	// background-color: var(--💅);
+	filter: invert(0) drop-shadow(0 0 3px var(--💅));
+
+	.🌗 {
+		z-index: 10;
+		position: absolute;
+		border-radius: 50%;
+		background: none;
+		border: 0px solid var(--☀️);
+		transition: all 500ms;
+
+		&.🌞 {
+			fill: var(--💅);
+			border: 2px solid var(--🌑);
+
+			width: 0.9em;
+			height: 0.9em;
+
+			&.🕶️ {
+				top: -0.15em;
+				// left: -0.15em;
+				border: 3.5px solid var(--🌑);
+			}
+			~ .😎 {
+				transform: rotate(90deg);
+				transition: transform 750ms 400ms;
+				.👓 {
+					width: 0.45em;
+					height: 1.7em;
+					background-color: var(--💅);
+				}
+			}
+		}
+
+		&.🌚 {
+			width: 20px;
+			height: 20px;
+			box-shadow: inset -0.3em -0.3em var(--💅);
+
+			~ .😎.👓 {
+				width: 0;
+				height: 0;
+			}
+		}
+	}
+	.😎 {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		position: absolute;
+		align-items: center;
+		justify-content: center;
+		// filter: invert(0) drop-shadow(0 0 0.1rem var(--💅));
+
+		.👓 {
+			position: absolute;
+			border-radius: 50%;
+			transition: all 500ms;
+		}
+		:nth-child(2) {
+			transform: rotate(45deg);
+		}
+		:nth-child(3) {
+			transform: rotate(90deg);
+		}
+		:nth-child(4) {
+			transform: rotate(-45deg);
+		}
+	}
+}
