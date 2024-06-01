@@ -15,15 +15,10 @@
 // === === === === === === == MetaData == === === === === === ===//
 
 // ==================== Main Render =====================//
-
 export default function Home({children}: any) {
-	return (
-		<>
-			<p>Content</p>
-			{children}
-		</>
-	);
+	return <>{children}</>;
 }
+
 // ==================== Main Render =====================//
 
 // === === === === === === == MetaData == === === === === === ===//

@@ -16,14 +16,6 @@
 
 // ==================== Main Render =====================//
 
-export default function Home({children}: any) {
-	return (
-		<>
-			<p>Content</p>
-			{children}
-		</>
-	);
-}
 // ==================== Main Render =====================//
 
 // === === === === === === == MetaData == === === === === === ===//
@@ -31,5 +23,7 @@ export default function Home({children}: any) {
 //
 
 // ==================== References =====================//
+
+
 
 // ==================== References =====================//

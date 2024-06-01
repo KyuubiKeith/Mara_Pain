@@ -2,6 +2,13 @@
 
 // NextJS
 
+// Store
+import ThemeToggle from '@/lib/molecules/toggles/themeToggle';
+import {useMenu, useTheme} from '@/lib/state';
+
+// React
+import useMediaQuery from '@/lib/viewport';
+
 // === === === === === === == Imports == === === === === === ===//
 
 //
@@ -16,14 +23,16 @@
 
 // ==================== Main Render =====================//
 
-export default function Home({children}: any) {
+export default function Header() {
 	return (
-		<>
-			<p>Content</p>
-			{children}
-		</>
+		<header id='🎩'>
+			🎩 Header
+			<ThemeToggle />
+			<br /> ======={' '}
+		</header>
 	);
 }
+
 // ==================== Main Render =====================//
 
 // === === === === === === == MetaData == === === === === === ===//

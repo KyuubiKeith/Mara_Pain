@@ -2,6 +2,12 @@
 
 // NextJS
 
+// Store
+import {useMenu, useTheme} from '@/lib/state';
+
+// React
+import useMediaQuery from '@/lib/viewport';
+
 // === === === === === === == Imports == === === === === === ===//
 
 //
@@ -16,14 +22,15 @@
 
 // ==================== Main Render =====================//
 
-export default function Home({children}: any) {
+export default function Footer() {
 	return (
-		<>
-			<p>Content</p>
-			{children}
-		</>
+		<footer id='👣'>
+			👣 Footer
+			<br /> =======
+		</footer>
 	);
 }
+
 // ==================== Main Render =====================//
 
 // === === === === === === == MetaData == === === === === === ===//
