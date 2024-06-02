@@ -1,0 +1,124 @@
+:root {
+
+    // ==================== Brand Identity =====================//
+
+    // Dark:
+    --🌑: #1d2123;
+
+    // Light:
+    --☀️: #f3ffd6;
+    --⛅: hsl(35, 74%, 95%);
+
+    // Accent
+    --💅: hsla(0, 79%, 30%, 100%);
+    --😎: hsla(0, 79%, 30%, 70%);
+
+    // Filler
+    --🌩️: hsl(230, 75%, 70%);
+
+    // Gradients
+
+    @media (prefers-color-scheme: dark) {
+
+        // Dark:
+        --🌑: #1d2123;
+
+        // Light:
+        --☀️: #f3ffd6;
+        --⛅: hsl(35, 74%, 95%);
+
+        // Accent
+        --💅: hsla(0, 79%, 30%, 100%);
+        --😎: hsla(0, 79%, 30%, 70%);
+
+        // Filler
+        --🌩️: hsl(230, 75%, 70%);
+
+        // Gradients
+        --🌠: linear-gradient(to bottom,
+                transparent,
+                var(--gradient-1) var(--gradient-12));
+        --⭐: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+        --🌟: linear-gradient(to bottom right,
+                rgba(1, 65, 255, 0),
+                rgba(1, 65, 255, 0),
+                rgba(137, 16, 16, 0.3));
+
+
+    }
+
+    // ==================== Brand Identity =====================//
+
+    //
+
+    // ==================== References =====================//
+
+    // // Brand Identity //
+    // --foreground-rgb: 0, 0, 0;
+    // --background-start-rgb: 214, 219, 220;
+    // --background-end-rgb: 255, 255, 255;
+
+    // --🌠: linear-gradient(to bottom, transparent, rgb(url(#gradient1))) rgb(var(--background-start-rgb));
+    // --⭐: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    // --🌟: linear-gradient(to bottom right,
+    //         rgba(1, 65, 255, 0),
+    //         rgba(1, 65, 255, 0),
+    //         rgba(137, 16, 16, 0.3));
+
+    // --volcanic: linear-gradient(to bottom, transparent, rgb(url(#gradient1))) rgb(var(--background-start-rgb));
+
+    // --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+
+    // --secondary-glow: linear-gradient(to bottom right,
+    //         rgba(1, 65, 255, 0),
+    //         rgba(1, 65, 255, 0),
+    //         rgba(137, 16, 16, 0.3));
+
+    // --starmax-orange: hsl(11, 100%, 72%);
+    // --starmax-orange-lighter: #ff9b61;
+    // --starmax-orange-darker: #ef5934;
+
+    // --starmax-purple: hsl(231, 76%, 65%);
+    // --starmax-purple-lighter: hsl(230, 75%, 70%);
+    // --starmax-purple-darker: hsl(255, 71%, 64%);
+
+    // --moss: hsl(160, 48%, 25%);
+    // --mustard: hsl(36, 94%, 55%);
+    // --orange: hsl(12, 85%, 57%);
+    // --snowy: hsl(35, 74%, 95%);
+    // --noctus: hsl(120, 100%, 6%);
+
+    // --forbidden-red: hsla(0, 79%, 30%, 70%);
+
+    // --blurry: hsla(0, 0%, 0%, 0.8);
+
+    // // Theming
+
+    // --ignis-lumos: hsla(35, 76%, 95%, 0.9);
+    // --snowy-light: hsla(35, 76%, 95%, 0.6);
+
+    // --🌑: hwb(200 11% 86%);
+    // --noctus-light: hsla(120, 100%, 6%, 0.8);
+
+    // // User Variables
+
+    // // Color Pallete
+    // --path-fill-1: url(#gradient1);
+    // --path-fill-2: url(#gradient2);
+    // --path-fill-3: url(#gradient3);
+
+    // --volcanic: linear-gradient(to bottom, transparent, rgb(url(#gradient1))) rgb(var(--background-start-rgb));
+
+    // --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+
+    // --secondary-glow: linear-gradient(to bottom right,
+    //         rgba(1, 65, 255, 0),
+    //         rgba(1, 65, 255, 0),
+    //         rgba(137, 16, 16, 0.3));
+
+    // --test: #1d2123;
+
+    // ==================== References =====================//
+
+
+}

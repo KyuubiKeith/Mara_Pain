@@ -4,68 +4,52 @@
 
 // NextJS
 import {usePathname} from 'next/navigation';
-
-// Styling
-import '@/lib/styles/blerdCorps.scss';
-
-// React
-import {useEffect, useRef} from 'react';
-
-// Smooth Scroll
-import Lenis from '@studio-freight/lenis';
+import {Metadata} from 'next';
 
 // Framer Motion
 import {motion, AnimatePresence} from 'framer-motion';
 
 // Components
-import Footer from '@/lib/components/global/footer/footer';
-import Header from '@/lib/components/global/header/header';
+// import Footer from "@/lib/components/global/footer/footer";
+import Header from '@/lib/organisms/header';
+// import Menu from '@/lib/components/organisms/menu';
+
+// Store
+import {useTheme} from '@/lib/templates/global/state';
+import Overlays from '@/lib/organisms/menu/menuOverlays';
+import MenuContent from '@/lib/organisms/menu/menuContent';
 
 // === === === === === === == Imports == === === === === === ===//
 
 //
 
-// === === === === === === == MetaData == === === === === === ===//
+//
 
 // === === === === === === == MetaData == === === === === === ===//
+
+export const metadata: Metadata = {
+	icons: {
+		icon: '/icons/Logo/Quill.svg',
+		shortcut: '/icons/Logo/Quill.svg',
+		apple: '/icons/Logo/Quill.svg',
+		other: {
+			rel: '/icons/Logo/Quill.svg',
+			url: '/icons/Logo/Quill.svg',
+		},
+	},
+};
+
+// === === === === === === == MetaData == === === === === === ===//
+
+//
 
 //
 
 // === === === === === === == Render == === === === === === ===//
 
 export default function Template({children}: {children: React.ReactNode}) {
-	//
-
-	// ==================== Lenis Smooth Scroll =====================//
-
-	const lenisRef = useRef<Lenis | null>(null);
-	const pathname = usePathname();
-
-	useEffect(() => {
-		if (lenisRef.current) lenisRef.current?.scrollTo(0, {immediate: true});
-	}, [pathname]);
-
-	useEffect(() => {
-		const lenis = new Lenis();
-		lenisRef.current = lenis;
-
-		function raf(time: number) {
-			lenis.raf(time);
-			requestAnimationFrame(raf);
-		}
-
-		requestAnimationFrame(raf);
-
-		return () => {
-			lenis.destroy();
-		};
-	}, []);
-
-	// ==================== Lenis Smooth Scroll =====================//
-
-	//
-
 	const key = usePathname();
+	const {theme}: any = useTheme();
 	const variants = {
 		hidden: {
 			y: 20,
@@ -91,20 +75,22 @@ export default function Template({children}: {children: React.ReactNode}) {
 
 	return (
 		<AnimatePresence
-			// initial={false}
+			initial={false}
 			mode='popLayout'>
 			<motion.main
+				id='📦'
 				key={key}
 				initial='hidden'
 				animate='enter'
 				exit='exit'
 				variants={variants}
-				// transition={{type: 'linear'}}
 				transition={{ease: 'easeInOut', duration: 0.75}}
-				className='overflow-hidden'>
+				className={theme ? '🌑' : '☀️'}>
+				<Overlays />
+				<MenuContent />
 				<Header />
-				<section id='📖'>{children}</section>
-				<Footer />
+				<article id='📖'>{children}</article>
+				{/* <Menu /> */}
 			</motion.main>
 		</AnimatePresence>
 	);
