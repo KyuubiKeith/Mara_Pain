@@ -7,7 +7,12 @@ import {usePathname} from 'next/navigation';
 import {Metadata} from 'next';
 
 // Framer Motion
-import {motion, AnimatePresence} from 'framer-motion';
+import {
+	motion,
+	AnimatePresence,
+	useMotionValue,
+	useSpring,
+} from 'framer-motion';
 
 // Components
 // import Footer from "@/lib/components/global/footer/footer";
@@ -19,6 +24,7 @@ import {useMenu, useTheme} from '@/lib/state';
 import Menu from '@/lib/organisms/menu';
 import Header from '@/lib/organisms/header';
 import Footer from '@/lib/organisms/footer';
+import {Children, useEffect, useState} from 'react';
 
 // === === === === === === == Imports == === === === === === ===//
 
@@ -48,9 +54,49 @@ export const metadata: Metadata = {
 
 // === === === === === === == Render == === === === === === ===//
 
+const Cursor = (props: {hideCursor: any}) => {
+	const cursorX = useMotionValue(-100);
+	const cursorY = useMotionValue(-100);
+
+	const springConfig = {
+		damping: 35,
+		stiffness: 700,
+		mass: 1,
+	};
+	const cursorXSpring = useSpring(cursorX, springConfig);
+	const cursorYSpring = useSpring(cursorY, springConfig);
+
+	useEffect(() => {
+		const moveCursor = (e: {clientX: number; clientY: number}) => {
+			cursorX.set(e.clientX);
+			cursorY.set(e.clientY);
+		};
+
+		window.addEventListener('mousemove', moveCursor);
+
+		return () => {
+			window.removeEventListener('mousemove', moveCursor);
+		};
+	}, []);
+
+	return (
+		<motion.div
+			style={{
+				translateX: cursorXSpring,
+				translateY: cursorYSpring,
+			}}
+			className='🏹'>
+			{!props.hideCursor == true ? (
+				<motion.div
+					layoutId='cursor'
+					className='🏹'></motion.div>
+			) : null}
+		</motion.div>
+	);
+};
+
 export default function Template({children}: {children: React.ReactNode}) {
 	//
-
 	const variants = {
 		hidden: {
 			y: 20,
@@ -79,8 +125,9 @@ export default function Template({children}: {children: React.ReactNode}) {
 
 	return (
 		<AnimatePresence
-			// initial={false}
-			mode='popLayout'>
+			initial={false}
+			mode='sync'>
+			<Cursor hideCursor={useMenu} />
 			<motion.main
 				key={key}
 				initial='hidden'
@@ -92,12 +139,22 @@ export default function Template({children}: {children: React.ReactNode}) {
 				// transition={{type: 'linear'}}
 				transition={{ease: 'easeInOut', duration: 0.75}}>
 				<Header />
-				<Menu />
-				<article id='📖'>
-					📖 {children}
-					<br /> ======={' '}
-				</article>
-
+				<motion.nav
+					transition={{
+						type: 'spring',
+						damping: 100,
+						stiffness: 500,
+					}}
+					initial={{
+						y: '-100%',
+					}}
+					animate={{
+						y: useMenu() ? '-100%' : '0%',
+					}}
+					className='fixed inset-0 bg-zinc-900/80 backdrop-blur z-[-1]'>
+					<Menu />
+				</motion.nav>
+				<article id='📖'>{children}</article>
 				<Footer />
 			</motion.main>
 		</AnimatePresence>

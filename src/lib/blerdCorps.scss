@@ -1,7 +1,10 @@
 @charset 'utf-8';
+
+@use 'open-props/gradients';
+
 @import 'https://unpkg.com/open-props';
 
 @import './atoms';
 @import './molecules';
-@import './organisms';
-@import './templates';
+// @import './organisms';
+// @import './templates';

@@ -19,36 +19,47 @@ import {useMenu, useTheme} from '@/lib/state';
 
 // === === === === === === == Render == === === === === === ===//
 
-//
-
-// ==================== Ease ====================//
-
-// ==================== Ease ====================//
-
-//
-
-// ==================== Overlays ====================//
-
-// ==================== Overlays ====================//
-
-//
-
 // ==================== Main Render =====================//
-
-// const elmOverlay = document.querySelector('.shape-overlays');
-// const overlay = new ShapeOverlays(elmOverlay);
 
 export default function Menu({children}: any) {
 	const {menu, toggleMenu}: any = useMenu();
 
 	return (
 		<>
-			<button
-				id='🍔'
-				type='button'
-				className='hamburger'
-				aria-label='Toggle Menu'
-				onClick={toggleMenu}></button>
+			{/* <menu className={menu ? '📜' : '🗞️'}>
+				<h1>Menu Content</h1>
+				<a
+					id='🍖'
+					className={menu ? '📜' : '🗞️'}
+					href='#'>
+					Menu Item
+				</a>
+				<a
+					id='🍖'
+					className={menu ? '📜' : '🗞️'}
+					href='#'>
+					Menu Item
+				</a>
+				<a
+					id='🍖'
+					className={menu ? '📜' : '🗞️'}
+					href='#'>
+					Menu Item
+				</a>
+				<a
+					id='🍖'
+					className={menu ? '📜' : '🗞️'}
+					href='#'>
+					Menu Item
+				</a>
+				{children}
+				<a
+					id='🍖'
+					className={menu ? '📜' : '🗞️'}
+					href='#'>
+					Menu Item
+				</a>
+			</menu> */}
 			{/* <button
 				id='🍔'
 				type='button'
@@ -148,7 +159,7 @@ export default function Menu({children}: any) {
 				<path className='📔'></path>
 			</svg>
 			<svg
-				className='shape-overlays'
+				className='🧣'
 				viewBox='0 0 100 100'
 				preserveAspectRatio='none'>
 				<defs>
@@ -198,27 +209,27 @@ export default function Menu({children}: any) {
 						/>
 					</linearGradient>
 				</defs>
-				<path className='shape-overlays__path'></path>
-				<path className='shape-overlays__path'></path>
-				<path className='shape-overlays__path'></path>
+				<path className='📔'></path>
+				<path className='📔'></path>
+				<path className='📔'></path>
 			</svg> */}
 
 			<div className='content content--demo-6'>
-				<div className='hamburger hamburger--demo-6 js-hover'>
-					<div className='hamburger__line hamburger__line--01'>
-						<div className='hamburger__line-in hamburger__line-in--01 hamburger__line-in--demo-5'></div>
+				<div className='🍔 🍔--demo-6 js-hover'>
+					<div className='🍔__line 🍔__line--01'>
+						<div className='🍔__line-in 🍔__line-in--01 🍔__line-in--demo-5'></div>
 					</div>
-					<div className='hamburger__line hamburger__line--02'>
-						<div className='hamburger__line-in hamburger__line-in--02 hamburger__line-in--demo-5'></div>
+					<div className='🍔__line 🍔__line--02'>
+						<div className='🍔__line-in 🍔__line-in--02 🍔__line-in--demo-5'></div>
 					</div>
-					<div className='hamburger__line hamburger__line--03'>
-						<div className='hamburger__line-in hamburger__line-in--03 hamburger__line-in--demo-5'></div>
+					<div className='🍔__line 🍔__line--03'>
+						<div className='🍔__line-in 🍔__line-in--03 🍔__line-in--demo-5'></div>
 					</div>
-					<div className='hamburger__line hamburger__line--cross01'>
-						<div className='hamburger__line-in hamburger__line-in--cross01 hamburger__line-in--demo-5'></div>
+					<div className='🍔__line 🍔__line--cross01'>
+						<div className='🍔__line-in 🍔__line-in--cross01 🍔__line-in--demo-5'></div>
 					</div>
-					<div className='hamburger__line hamburger__line--cross02'>
-						<div className='hamburger__line-in hamburger__line-in--cross02 hamburger__line-in--demo-5'></div>
+					<div className='🍔__line 🍔__line--cross02'>
+						<div className='🍔__line-in 🍔__line-in--cross02 🍔__line-in--demo-5'></div>
 					</div>
 				</div>
 
@@ -226,82 +237,83 @@ export default function Menu({children}: any) {
 				<div className='global-menu'>
 					<div className='global-menu__wrap'>
 						<a
-							className='global-menu__item global-menu__item--demo-6'
+							className='🍖'
 							href='#'>
 							Data Science
 						</a>
 						<a
-							className='global-menu__item global-menu__item--demo-6'
+							className='🍖'
 							href='#'>
 							Research
 						</a>
 						<a
-							className='global-menu__item global-menu__item--demo-6'
+							className='🍖'
 							href='#'>
 							Case Studies
 						</a>
 						<a
-							className='global-menu__item global-menu__item--demo-6'
+							className='🍖'
 							href='#'>
 							Contact
 						</a>
 					</div>
+					<svg
+						className='🧣'
+						viewBox='0 0 100 100'
+						preserveAspectRatio='none'>
+						<defs>
+							<linearGradient
+								id='gradient1'
+								x1='0%'
+								y1='0%'
+								x2='0%'
+								y2='100%'>
+								<stop
+									offset='0%'
+									stopColor='#00c99b'
+								/>
+								<stop
+									offset='100%'
+									stopColor='#ff0ea1'
+								/>
+							</linearGradient>
+							<linearGradient
+								id='gradient2'
+								x1='0%'
+								y1='0%'
+								x2='0%'
+								y2='100%'>
+								<stop
+									offset='0%'
+									stopColor='#ffd392'
+								/>
+								<stop
+									offset='100%'
+									stopColor='#ff3898'
+								/>
+							</linearGradient>
+							<linearGradient
+								id='gradient3'
+								x1='0%'
+								y1='0%'
+								x2='0%'
+								y2='100%'>
+								<stop
+									offset='0%'
+									stopColor='#110046'
+								/>
+								<stop
+									offset='100%'
+									stopColor='#32004a'
+								/>
+							</linearGradient>
+						</defs>
+						<path className='📔'></path>
+						<path className='📔'></path>
+						<path className='📔'></path>
+						<path className='📔'></path>
+					</svg>
 				</div>
-				<svg
-					className='shape-overlays'
-					viewBox='0 0 100 100'
-					preserveAspectRatio='none'>
-					<defs>
-						<linearGradient
-							id='gradient1'
-							x1='0%'
-							y1='0%'
-							x2='0%'
-							y2='100%'>
-							<stop
-								offset='0%'
-								stopColor='#00c99b'
-							/>
-							<stop
-								offset='100%'
-								stopColor='#ff0ea1'
-							/>
-						</linearGradient>
-						<linearGradient
-							id='gradient2'
-							x1='0%'
-							y1='0%'
-							x2='0%'
-							y2='100%'>
-							<stop
-								offset='0%'
-								stopColor='#ffd392'
-							/>
-							<stop
-								offset='100%'
-								stopColor='#ff3898'
-							/>
-						</linearGradient>
-						<linearGradient
-							id='gradient3'
-							x1='0%'
-							y1='0%'
-							x2='0%'
-							y2='100%'>
-							<stop
-								offset='0%'
-								stopColor='#110046'
-							/>
-							<stop
-								offset='100%'
-								stopColor='#32004a'
-							/>
-						</linearGradient>
-					</defs>
-					<path className='shape-overlays__path'></path>
-					<path className='shape-overlays__path'></path>
-					<path className='shape-overlays__path'></path>
-				</svg>
 			</div>
 		</>
 	);
@@ -332,7 +344,7 @@ export default function Menu({children}: any) {
 // 			Case Studies
 // 		</a>
 // 		<a
-// 			className='global-menu__item global-menu__item--demo-6'
+// 			className='🍖🍖'
 // 			href='#'>
 // 			Contact
 // 		</a>
@@ -391,9 +403,9 @@ export default function Menu({children}: any) {
 // 			/>
 // 		</linearGradient>
 // 	</defs>
-// 	<path className='shape-overlays__path'></path>
-// 	<path className='shape-overlays__path'></path>
-// 	<path className='shape-overlays__path'></path>
+// 	<path className='📔'></path>
+// 	<path className='📔'></path>
+// 	<path className='📔'></path>
 // </svg>
 
 //class ShapeOverlays {
@@ -496,23 +508,23 @@ export default function Menu({children}: any) {
 // }
 
 // 	(function () {
-// 		const elmHamburger = document.querySelector('.hamburger');
+// 		const elm🍔 = document.querySelector('.🍔');
 // 		const gNavItems = document.querySelectorAll('.global-menu__item');
-// 		const elmOverlay = document.querySelector('.shape-overlays');
+// 		const elmOverlay = document.querySelector('.🧣');
 // 		const overlay = new ShapeOverlays(elmOverlay);
 
-// 		elmHamburger.addEventListener('click', () => {
+// 		elm🍔.addEventListener('click', () => {
 // 			if (overlay.isAnimating) {
 // 				return false;
 // 			}
 // 			overlay.toggle();
 // 			if (overlay.isOpened === true) {
-// 				elmHamburger.classList.add('is-opened-navi');
+// 				elm🍔.classList.add('is-opened-navi');
 // 				for (var i = 0; i < gNavItems.length; i++) {
 // 					gNavItems[i].classList.add('is-opened');
 // 				}
 // 			} else {
-// 				elmHamburger.classList.remove('is-opened-navi');
+// 				elm🍔.classList.remove('is-opened-navi');
 // 				for (var i = 0; i < gNavItems.length; i++) {
 // 					gNavItems[i].classList.remove('is-opened');
 // 				}
@@ -535,12 +547,12 @@ export default function Menu({children}: any) {
 // 		}
 // 	}, []);
 
-// 	const elmHamburger = useRef < HTMLButtonElement > null;
+// 	const elm🍔 = useRef < HTMLButtonElement > null;
 // 	const gNavItems = document.querySelectorAll('.global-menu__item');
 // 	const elmOverlay = createRef();
 // 	const overlay = new ShapeOverlays(elmOverlay);
 
-// 	elmHamburger.current?.addEventListener('click', () => {
+// 	elm🍔.current?.addEventListener('click', () => {
 // 		overlay.toggle();
 // 	});
 

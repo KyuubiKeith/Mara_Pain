@@ -1,1 +1,34 @@
+@forward './header/';
 @forward './menu/';
+
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+main {
+	transition: all 1s;
+
+	// ==================== Theme ====================//
+
+	@media (prefers-color-scheme: dark) {
+		background-color: var(--noctus);
+		color: var(--ignis);
+
+		&.☀️ {
+			background-color: var(--snowy);
+			color: var(--noctus);
+		}
+
+		&.🌑 {
+			background-color: var(--noctus);
+			color: var(--snowy);
+		}
+	}
+
+	// ==================== Theme ====================//
+}

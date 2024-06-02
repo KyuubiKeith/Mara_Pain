@@ -64,7 +64,6 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 			/>
 			<body>
 				{children}
-
 				<Script src='/scripts/overlays.js' />
 			</body>
 		</html>

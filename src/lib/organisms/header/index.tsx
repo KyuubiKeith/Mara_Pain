@@ -3,11 +3,14 @@
 // NextJS
 
 // Store
-import ThemeToggle from '@/lib/molecules/toggles/themeToggle';
 import {useMenu, useTheme} from '@/lib/state';
 
 // React
 import useMediaQuery from '@/lib/viewport';
+
+// Components
+import MenuToggle from '../menu/menuToggle';
+import ThemeToggle from '@/lib/molecules/toggles/themeToggle';
 
 // === === === === === === == Imports == === === === === === ===//
 
@@ -26,9 +29,8 @@ import useMediaQuery from '@/lib/viewport';
 export default function Header() {
 	return (
 		<header id='🎩'>
-			🎩 Header
 			<ThemeToggle />
-			<br /> ======={' '}
+			<MenuToggle />
 		</header>
 	);
 }

@@ -230,13 +230,13 @@ class ShapeOverlays {
 	}
 	open() {
 		this.isOpened = true;
-		this.elm.classList.add('is-opened');
+		this.elm.classList.add('📜');
 		this.timeStart = Date.now();
 		this.renderLoop();
 	}
 	close() {
 		this.isOpened = false;
-		this.elm.classList.remove('is-opened');
+		this.elm.classList.remove('📜');
 		this.timeStart = Date.now();
 		this.renderLoop();
 	}
@@ -304,9 +304,9 @@ class ShapeOverlays {
 }
 
 (function () {
-	const elmHamburger = document.querySelector('.hamburger');
-	const gNavItems = document.querySelectorAll('.global-menu__item');
-	const elmOverlay = document.querySelector('.shape-overlays');
+	const elmHamburger = document.querySelector('#🍔');
+	const gNavItems = document.querySelectorAll('.🍖');
+	const elmOverlay = document.querySelector('.🧣');
 	const overlay = new ShapeOverlays(elmOverlay);
 
 	elmHamburger.addEventListener('click', () => {
@@ -315,14 +315,14 @@ class ShapeOverlays {
 		}
 		overlay.toggle();
 		if (overlay.isOpened === true) {
-			elmHamburger.classList.add('is-opened-navi');
+			elmHamburger.classList.add('📜-navi');
 			for (var i = 0; i < gNavItems.length; i++) {
-				gNavItems[i].classList.add('is-opened');
+				gNavItems[i].classList.add('📜');
 			}
 		} else {
-			elmHamburger.classList.remove('is-opened-navi');
+			elmHamburger.classList.remove('📜-navi');
 			for (var i = 0; i < gNavItems.length; i++) {
-				gNavItems[i].classList.remove('is-opened');
+				gNavItems[i].classList.remove('📜');
 			}
 		}
 	});
