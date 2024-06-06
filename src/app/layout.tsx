@@ -14,6 +14,7 @@ import {useEffect, useRef} from 'react';
 
 // Smooth Scroll
 import Lenis from '@studio-freight/lenis';
+import MenuContent from '@/lib/organisms/menu/menuContent';
 
 // === === === === === === == Imports == === === === === === ===//
 

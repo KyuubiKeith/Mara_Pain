@@ -17,6 +17,9 @@
     --🌩️: hsl(230, 75%, 70%);
 
     // Gradients
+    --path-fill-1: url(#gradient1);
+    --path-fill-2: url(#gradient2);
+    --path-fill-3: url(#gradient3);
 
     @media (prefers-color-scheme: dark) {
 

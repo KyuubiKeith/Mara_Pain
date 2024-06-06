@@ -2,6 +2,7 @@
 
 // Store
 import {useMenu} from '@/lib/templates/global/state';
+import {useRef} from 'react';
 
 // === === === === === === == Imports == === === === === === ===//
 
@@ -11,46 +12,25 @@ import {useMenu} from '@/lib/templates/global/state';
 
 export default function MenuToggle() {
 	const {menu, toggleMenu}: any = useMenu();
+	const toggleRef = useRef(null);
 	return (
-		<>
-			{/* <button
-				className='menuIcon'
-				type='button'
+		<label
+			className='logo menuIcon'
+			// onClick={toggleMenu}
+		>
+			<input
+				id='🍔'
+				ref={toggleRef}
+				title={menu ? 'open' : 'close'}
+				type='checkbox'
 				aria-label='Toggle Menu'
-				onClick={toggleMenu}>
-				<p>{menu ? '📖' : '📔'}</p>
-			</button> */}
-			<div className='hamburger hamburger--demo-6 js-hover'>
-				<div className='hamburger__line hamburger__line--01'>
-					<div className='hamburger__line-in hamburger__line-in--01 hamburger__line-in--demo-5'></div>
-				</div>
-				<div className='hamburger__line hamburger__line--02'>
-					<div className='hamburger__line-in hamburger__line-in--02 hamburger__line-in--demo-5'></div>
-				</div>
-				<div className='hamburger__line hamburger__line--03'>
-					<div className='hamburger__line-in hamburger__line-in--03 hamburger__line-in--demo-5'></div>
-				</div>
-				<div className='hamburger__line hamburger__line--cross01'>
-					<div className='hamburger__line-in hamburger__line-in--cross01 hamburger__line-in--demo-5'></div>
-				</div>
-				<div className='hamburger__line hamburger__line--cross02'>
-					<div className='hamburger__line-in hamburger__line-in--cross02 hamburger__line-in--demo-5'></div>
-				</div>
+				defaultChecked
+				onChange={toggleMenu}></input>
+			<div>
+				<span></span>
+				<span></span>
 			</div>
-			<label
-				className='logo menuIcon'
-				// onChange={toggleMenu}
-			>
-				<input
-					title='open'
-					type='checkbox'
-					defaultChecked></input>
-				<div>
-					<span></span>
-					<span></span>
-				</div>
-			</label>
-		</>
+		</label>
 	);
 }
 

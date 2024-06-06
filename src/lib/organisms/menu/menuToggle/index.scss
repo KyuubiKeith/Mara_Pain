@@ -1,6 +1,6 @@
 .menuIcon {
     grid-area: Menu;
-    // z-index: 1;
+    z-index: 1;
     // width: 20px;
     // height: 20px;
     // position: relative;
@@ -15,7 +15,7 @@
     perspective: 600px;
     width: 35px;
     height: 35px;
-    position: relative;
+    position: sticky !important;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 

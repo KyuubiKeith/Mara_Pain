@@ -40,9 +40,9 @@ const ease = {
 };
 
 class ShapeOverlays {
-	constructor(menu) {
-		this.menu = menu;
-		this.path = menu.querySelector('path');
+	constructor(elm) {
+		this.elm = elm;
+		this.path = document.querySelectorAll('path');
 		this.numPoints = 10;
 		this.duration = 900;
 		this.delayPointsArray = [];
@@ -65,13 +65,11 @@ class ShapeOverlays {
 	}
 	open() {
 		this.isOpened = true;
-		this.menu.classList.add('is-opened');
 		this.timeStart = Date.now();
 		this.renderLoop();
 	}
 	close() {
 		this.isOpened = false;
-		this.menu.classList.remove('is-opened');
 		this.timeStart = Date.now();
 		this.renderLoop();
 	}
@@ -141,28 +139,27 @@ class ShapeOverlays {
 }
 
 (function () {
-	const elmHamburger = document.querySelector('.menuIon');
-	const gNavItems = document.querySelector('.global-menu__item');
-	const menuOverlay = document.querySelectorAll('.shape-overlays');
-	const overlay = new ShapeOverlays(menuOverlay);
-
-	if (elmHamburger) {
-		elmHamburger.addEventListener('click', () => {
-			if (overlay.isAnimating) {
-				return false;
-			}
-			overlay.toggle();
-			if (overlay.isOpened === true) {
-				elmHamburger.classList.add('open');
-				for (var i = 0; i < gNavItems.length; i++) {
-					gNavItems[i].classList.add('is-opened');
-				}
-			} else {
-				elmHamburger.classList.remove('open');
-				for (var i = 0; i < gNavItems.length; i++) {
-					gNavItems[i].classList.remove('is-opened');
-				}
-			}
-		});
-	}
-});
+	const elmHamburger = document.querySelector('#🍔');
+	const gNavItems = document.querySelectorAll('.🍖');
+	const elmOverlay = document.querySelector('#🧣');
+	const overlay = new ShapeOverlays(elmOverlay);
+	console.log(elmOverlay);
+	elmHamburger.addEventListener('click', () => {
+		if (overlay.isAnimating) {
+			return false;
+		}
+		overlay.toggle();
+		if (overlay.isOpened === true) {
+			overlay.close();
+			// for (var i = 0; i < gNavItems.length; i++) {
+			// 	gNavItems[i].classList.add('is-opened');
+			// }
+		} else {
+			// elmHamburger.classList.remove('is-opened-navi');
+			// for (var i = 0; i < gNavItems.length; i++) {
+			// 	gNavItems[i].classList.remove('is-opened');
+			// }
+			overlay.open();
+		}
+	});
+})();

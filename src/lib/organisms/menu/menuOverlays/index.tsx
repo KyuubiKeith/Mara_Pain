@@ -11,11 +11,12 @@ import {useMenu} from '@/lib/templates/global/state';
 
 // ==================== Render ====================//
 
-export default function Overlays() {
-	const {menu, toggleMenu}: any = useMenu();
+export default function MenuOverlays() {
+	const {menu}: any = useMenu();
 	return (
 		<svg
-			className={`${menu ? 'shape-overlays is-opened' : 'shape-overlays'}`}
+			id='🧣'
+			className={menu ? '📜' : '📓'}
 			viewBox='0 0 100 100'
 			preserveAspectRatio='none'>
 			<defs>
@@ -27,11 +28,11 @@ export default function Overlays() {
 					y2='100%'>
 					<stop
 						offset='0%'
-						stopColor='#ef5934'
+						stopColor='#00c99b'
 					/>
 					<stop
 						offset='100%'
-						stopColor='#ef5934'
+						stopColor='#ff0ea1'
 					/>
 				</linearGradient>
 				<linearGradient
@@ -42,11 +43,11 @@ export default function Overlays() {
 					y2='100%'>
 					<stop
 						offset='0%'
-						stopColor='#f8a220'
+						stopColor='#ffd392'
 					/>
 					<stop
 						offset='100%'
-						stopColor='#ef5934'
+						stopColor='#ff3898'
 					/>
 				</linearGradient>
 				<linearGradient
@@ -57,11 +58,11 @@ export default function Overlays() {
 					y2='100%'>
 					<stop
 						offset='0%'
-						stopColor='#215e4a'
+						stopColor='#110046'
 					/>
 					<stop
 						offset='100%'
-						stopColor='#215e4a'
+						stopColor='#32004a'
 					/>
 				</linearGradient>
 			</defs>

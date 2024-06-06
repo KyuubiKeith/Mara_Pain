@@ -1,3 +1,5 @@
+'use client';
+
 // ==================== Imports ====================//
 
 //React
@@ -6,7 +8,11 @@
 // import ThemeToggle from '../theme-toggle';
 
 // React
+import {useMenu} from '@/lib/templates/global/state';
 import useMediaQuery from '@/lib/templates/global/viewport';
+import MenuOverlays from '../menuOverlays';
+import {motion} from 'framer-motion';
+import Link from 'next/link';
 
 // Components
 
@@ -16,37 +22,39 @@ import useMediaQuery from '@/lib/templates/global/viewport';
 
 export default function MenuContent() {
 	const isMobile = useMediaQuery('(max-width: 768px)');
+	const {menu, toggleMenu}: any = useMenu();
+
 	return (
-		<div className='global-menu'>
-			<div className='global-menu__wrap'>
-				<a
-					className='global-menu__item global-menu__item--demo-6'
-					href='#'>
-					Data Science
-				</a>
-				<a
-					className='global-menu__item global-menu__item--demo-6'
-					href='#'>
-					Research
-				</a>
-				<a
-					className='global-menu__item global-menu__item--demo-6'
-					href='#'>
-					Case Studies
-				</a>
-				<a
-					className='global-menu__item global-menu__item--demo-6'
-					href='#'>
+		<menu>
+			<MenuOverlays />
+			<motion.nav className={menu ? '📜' : '🗞️'}>
+				<Link
+					className={menu ? '🍖 📜' : '🍖'}
+					href={'/contact'}
+					onClick={toggleMenu}>
 					Contact
+				</Link>
+				<Link
+					className={menu ? '🍖 📜' : '🍖'}
+					href={'/gallery'}
+					onClick={toggleMenu}>
+					Gallery
+				</Link>
+				<Link
+					className={menu ? '🍖 📜' : '🍖'}
+					href={'/about'}>
+					next menu item
+				</Link>
+
+				<a
+					className='🍖'
+					href='/'>
+					{/* <ThemeToggle /> */}
+					{/* {isMobile ? <ThemeToggle className='mobileMenu' /> : null} */}
+					current home
 				</a>
-				{/* <a
-					className='global-menu__item global-menu__item--demo-6'
-					href='#'>
-					<ThemeToggle />
-					{isMobile ? <ThemeToggle className='mobileMenu' /> : null}
-				</a> */}
-			</div>
-		</div>
+			</motion.nav>
+		</menu>
 	);
 }
 

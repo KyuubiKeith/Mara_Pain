@@ -1,72 +1,84 @@
-export default function Page() {
+import MenuContent from '@/lib/organisms/menu/menuContent';
+// import { children } from 'react';
+
+export default function Page(children: any) {
 	return (
-		<div>
-			<h1>A Visual Type Scale</h1>
+		<>
+			{/* {children} */}
 
-			<p>
-				What looked like a small patch of purple grass, above five feet square,
-				was moving across the sand in their direction.
-			</p>
+			<div>
+				<h1>A Visual Type Scale</h1>
 
-			<p>
-				When it came near enough he perceived that it was not grass; there were
-				no blades, but only purple roots. The roots were revolving, for each
-				small plant in the whole patch, like the spokes of a rimless wheel.
-			</p>
+				<p>
+					What looked like a small patch of purple grass, above five feet
+					square, was moving across the sand in their direction.
+				</p>
 
-			<h2>A Visual Type Scale</h2>
+				<p>
+					When it came near enough he perceived that it was not grass; there
+					were no blades, but only purple roots. The roots were revolving, for
+					each small plant in the whole patch, like the spokes of a rimless
+					wheel.
+				</p>
 
-			<p>
-				What looked like a small patch of purple grass, above five feet square,
-				was moving across the sand in their direction.
-			</p>
+				<h2>A Visual Type Scale</h2>
 
-			<p>
-				When it came near enough he perceived that it was not grass; there were
-				no blades, but only purple roots. The roots were revolving, for each
-				small plant in the whole patch, like the spokes of a rimless wheel.
-			</p>
+				<p>
+					What looked like a small patch of purple grass, above five feet
+					square, was moving across the sand in their direction.
+				</p>
 
-			<h3>A Visual Type Scale</h3>
+				<p>
+					When it came near enough he perceived that it was not grass; there
+					were no blades, but only purple roots. The roots were revolving, for
+					each small plant in the whole patch, like the spokes of a rimless
+					wheel.
+				</p>
 
-			<p>
-				What looked like a small patch of purple grass, above five feet square,
-				was moving across the sand in their direction.
-			</p>
+				<h3>A Visual Type Scale</h3>
 
-			<p>
-				When it came near enough he perceived that it was not grass; there were
-				no blades, but only purple roots. The roots were revolving, for each
-				small plant in the whole patch, like the spokes of a rimless wheel.
-			</p>
+				<p>
+					What looked like a small patch of purple grass, above five feet
+					square, was moving across the sand in their direction.
+				</p>
 
-			<h4>A Visual Type Scale</h4>
+				<p>
+					When it came near enough he perceived that it was not grass; there
+					were no blades, but only purple roots. The roots were revolving, for
+					each small plant in the whole patch, like the spokes of a rimless
+					wheel.
+				</p>
 
-			<p>
-				What looked like a small patch of purple grass, above five feet square,
-				was moving across the sand in their direction.
-			</p>
+				<h4>A Visual Type Scale</h4>
 
-			<p>
-				When it came near enough he perceived that it was not grass; there were
-				no blades, but only purple roots. The roots were revolving, for each
-				small plant in the whole patch, like the spokes of a rimless wheel.
-			</p>
+				<p>
+					What looked like a small patch of purple grass, above five feet
+					square, was moving across the sand in their direction.
+				</p>
 
-			<h5>A Visual Type Scale</h5>
+				<p>
+					When it came near enough he perceived that it was not grass; there
+					were no blades, but only purple roots. The roots were revolving, for
+					each small plant in the whole patch, like the spokes of a rimless
+					wheel.
+				</p>
 
-			<p>
-				What looked like a small patch of purple grass, above five feet square,
-				was moving across the sand in their direction.
-			</p>
+				<h5>A Visual Type Scale</h5>
 
-			<p>
-				When it came near enough he perceived that it was not grass; there were
-				no blades, but only purple roots. The roots were revolving, for each
-				small plant in the whole patch, like the spokes of a rimless wheel.
-			</p>
+				<p>
+					What looked like a small patch of purple grass, above five feet
+					square, was moving across the sand in their direction.
+				</p>
 
-			<a>— Excerpt from A Voyage to Arcturus, by David Lindsay.</a>
-		</div>
+				<p>
+					When it came near enough he perceived that it was not grass; there
+					were no blades, but only purple roots. The roots were revolving, for
+					each small plant in the whole patch, like the spokes of a rimless
+					wheel.
+				</p>
+
+				<a>— Excerpt from A Voyage to Arcturus, by David Lindsay.</a>
+			</div>
+		</>
 	);
 }

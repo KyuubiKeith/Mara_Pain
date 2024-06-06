@@ -86,11 +86,9 @@ export default function Template({children}: {children: React.ReactNode}) {
 				variants={variants}
 				transition={{ease: 'easeInOut', duration: 0.75}}
 				className={theme ? '🌑' : '☀️'}>
-				<Overlays />
-				<MenuContent />
 				<Header />
+				<MenuContent />
 				<article id='📖'>{children}</article>
-				{/* <Menu /> */}
 			</motion.main>
 		</AnimatePresence>
 	);
