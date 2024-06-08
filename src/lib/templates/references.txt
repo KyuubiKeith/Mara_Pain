@@ -1,0 +1,849 @@
+ // === === === === === === == MetaData == === === === === === ===//
+
+// === === === === === === == MetaData == === === === === === ===//
+
+//
+
+
+// ==================== Imports =====================//
+
+// ==================== Imports =====================//
+
+//
+
+
+// properties
+// color
+// animations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// === === === === === === == MetaData == === === === === === ===//
+
+// === === === === === === == MetaData == === === === === === ===//
+
+//
+
+
+// ==================== Imports =====================//
+
+// ==================== Imports =====================//
+
+//
+
+
+// NextJS
+
+
+#📦 {
+	// Header
+	#🎩 {
+	}
+
+	// Menu
+	#📜 {
+	}
+
+	// Body
+	#📖 {
+	}
+
+	// Footer
+	#👣 {
+	}
+}
+
+
+
+@use '../../atoms' as *;
+
+$layout-breakpoint-small: 768px;
+
+// @media (prefers-color-scheme: dark) {
+// }
+
+.🌓 {
+	--button-diameter: 15px;
+	--shape-size: 15px;
+	border: none;
+	outline: none;
+	display: flex;
+	cursor: pointer;
+	border-radius: 50%;
+	position: relative;
+	align-items: center;
+	background-color: transparent;
+	justify-content: center;
+	transition: box-shadow 500ms;
+	font-size: var(--shape-size);
+	width: var(--button-diameter);
+	height: var(--button-diameter);
+	box-shadow: 4px 4px 15px transparent;
+	z-index: 1;
+}
+.🌑 ~ .🌓 {
+	::before {
+		content: '☀️';
+	}
+	box-shadow: 4px 4px 15px transparent;
+}
+
+.🌓 span {
+	display: inline-block;
+}
+.🌓 .🌞 {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+}
+.🌓 .🌞 .👓 {
+	position: absolute;
+	border-radius: 50%;
+	transition: all 500ms;
+}
+.🌓 .🌞 .👓:nth-child(2) {
+	transform: rotate(45deg);
+}
+.🌓 .🌞 .👓:nth-child(3) {
+	transform: rotate(90deg);
+}
+.🌓 .🌞 .👓:nth-child(4) {
+	transform: rotate(-45deg);
+}
+
+.🌓 .🌗 {
+	z-index: 10;
+	position: absolute;
+	border-radius: 50%;
+	background: none;
+	border: 0px solid transparent;
+	transition: all 500ms;
+
+	&.😎 {
+		fill: var(--💅);
+		filter: invert(0) drop-shadow(0 0 0.3rem --💅);
+		border: 2px solid var(--💅);
+
+		&.🕶️ {
+			// top: -18%;
+			// left: -13%;
+			// fill: var(--noctus);
+			// filter: invert(1) drop-shadow(0 0 0.3rem --💅);
+			border: 3px solid var(--🌑);
+		}
+	}
+}
+.🌓 .🌗.🌚 {
+	width: 20px;
+	height: 20px;
+	box-shadow: inset -0.3em -0.3em var(--orange);
+}
+.🌓 .🌗.🌚 ~ .🌞 .👓 {
+	width: 0;
+	height: 0;
+}
+.🌓 .🌗.😎 {
+	width: 0.9em;
+	height: 0.9em;
+	// box-shadow: inset -0.7em -0.7em var(--forbidden-red);
+	// fill: #8a1010;
+	// filter: invert(0) drop-shadow(0 0 0.3rem --forbidden-red);
+}
+.🌓 .🌗.😎 ~ .🌞 {
+	transform: rotate(90deg);
+	transition: transform 750ms 400ms;
+}
+.🌓 .🌗.😎 ~ .🌞 .👓 {
+	width: 0.45em;
+	height: 1.7em;
+	background-color: var(--forbidden-red);
+}
+
+$layout-breakpoint-small: 768px;
+
+// .theme-toggle--button {
+// 	--button-diameter: 15px;
+// 	--shape-size: 15px;
+// 	border: none;
+// 	outline: none;
+// 	display: flex;
+// 	cursor: pointer;
+// 	border-radius: 50%;
+// 	position: relative;
+// 	align-items: center;
+// 	background-color: transparent;
+// 	justify-content: center;
+// 	transition: box-shadow 500ms;
+// 	font-size: var(--shape-size);
+// 	width: var(--button-diameter);
+// 	height: var(--button-diameter);
+// 	box-shadow: 4px 4px 15px transparent;
+// 	z-index: 1;
+// }
+// .dark ~ .theme-toggle--button {
+// 	box-shadow: 4px 4px 15px transparent;
+// }
+// .theme-toggle--button span {
+// 	display: inline-block;
+// }
+// .theme-toggle--button .rays--container {
+// 	width: 100%;
+// 	height: 100%;
+// 	display: flex;
+// 	position: absolute;
+// 	align-items: center;
+// 	justify-content: center;
+// }
+// .theme-toggle--button .rays--container .ray {
+// 	position: absolute;
+// 	border-radius: 50%;
+// 	transition: all 500ms;
+// }
+// .theme-toggle--button .rays--container .ray:nth-child(2) {
+// 	transform: rotate(45deg);
+// }
+// .theme-toggle--button .rays--container .ray:nth-child(3) {
+// 	transform: rotate(90deg);
+// }
+// .theme-toggle--button .rays--container .ray:nth-child(4) {
+// 	transform: rotate(-45deg);
+// }
+// .theme-toggle--button .shape {
+// 	z-index: 10;
+// 	position: absolute;
+// 	border-radius: 50%;
+// 	background: none;
+// 	border: 0px solid transparent;
+// 	transition: all 500ms;
+
+// 	&.sun {
+// 		fill: var(--💅);
+// 		filter: invert(0) drop-shadow(0 0 0.3rem --💅);
+// 		border: 2px solid var(--💅);
+
+// 		&.moss {
+// 			// top: -18%;
+// 			// left: -13%;
+// 			fill: var(--noctus);
+// 			filter: invert(0) drop-shadow(0 0 0.3rem --💅);
+// 			border: 3px solid var(--noctus);
+// 		}
+// 	}
+// }
+// .theme-toggle--button .shape.moon {
+// 	width: 20px;
+// 	height: 20px;
+// 	box-shadow: inset -0.3em -0.3em var(--forbidden-red);
+// }
+// .theme-toggle--button .shape.moon ~ .rays--container .ray {
+// 	width: 0;
+// 	height: 0;
+// }
+// .theme-toggle--button .shape.sun {
+// 	width: 0.9em;
+// 	height: 0.9em;
+// 	box-shadow: inset -0.7em -0.7em var(--forbidden-red);
+// 	fill: #8a1010;
+// 	filter: invert(0) drop-shadow(0 0 0.3rem --forbidden-red);
+// }
+// .theme-toggle--button .shape.sun ~ .rays--container {
+// 	transform: rotate(90deg);
+// 	transition: transform 750ms 400ms;
+// }
+// .theme-toggle--button .shape.sun ~ .rays--container .ray {
+// 	width: 0.45em;
+// 	height: 1.7em;
+// 	background-color: var(--forbidden-red);
+// }
+
+// #🌓 {
+// 	--button-diameter: 15px;
+// 	--shape-size: 15px;
+// 	border: none;
+// 	outline: none;
+// 	display: flex;
+// 	cursor: pointer;
+// 	border-radius: 50%;
+// 	position: relative;
+// 	align-items: center;
+// 	background-color: transparent;
+// 	justify-content: center;
+// 	transition: box-shadow 500ms;
+// 	font-size: var(--shape-size);
+// 	width: var(--button-diameter);
+// 	height: var(--button-diameter);
+// 	box-shadow: 4px 4px 15px transparent;
+// 	z-index: 1;
+
+// 	// background-color: var(--💅) !important;
+
+// 	span.🌗 {
+// 		background-color: var(--💅) !important;
+
+// 		z-index: 10;
+// 		position: absolute;
+// 		border-radius: 50%;
+// 		background: none;
+// 		border: 0px solid transparent;
+// 		transition: all 500ms;
+// 		&.🌞 {
+// 			background-color: var(--💅) !important;
+
+// 			width: 0.9em;
+// 			height: 0.9em;
+
+// 			// fill: var(--💅);
+// 			// filter: invert(0) drop-shadow(0 0 0.3rem --💅);
+// 			// border: 2px solid var(--💅);
+
+// 			// width: 0.9em;
+// 			// height: 0.9em;
+// 			// box-shadow: inset -0.7em -0.7em var(--forbidden-red);
+// 			// fill: #8a1010;
+// 			// filter: invert(0) drop-shadow(0 0 0.3rem --forbidden-red);
+// 			&.🕶️ {
+// 				// top: -18%;
+// 				// left: -13%;
+// 				background-color: var(--💅) !important;
+
+// 				width: 0.9em;
+// 				height: 0.9em;
+// 			}
+// 			span.😎 {
+// 				transform: rotate(90deg);
+// 				transition: transform 750ms 400ms;
+// 				background-color: var(--💅) !important;
+// 			}
+// 		}
+// 		&.🌚 {
+// 			width: 20px;
+// 			height: 20px;
+// 			box-shadow: inset -0.3em -0.3em var(--💅);
+// 			background-color: var(--💅) !important;
+
+// 			&.🕶️ {
+// 				width: 0;
+// 				height: 0;
+// 			}
+// 		}
+// 	}
+// }
+
+// .👓 {
+// 	background-color: var(--💅);
+// 	width: 0.45em !important;
+// 	height: 1.7em !important;
+// 	&:nth-child(2) {
+// 		transform: rotate(45deg);
+// 	}
+// 	&:nth-child(3) {
+// 		transform: rotate(90deg);
+// 	}
+// 	:nth-child(4) {
+// 		transform: rotate(-45deg);
+// 	}
+// }
+
+class ShapeOverlays {
+		const {menu, toggleMenu}: any = useMenu();
+		const path = menu
+
+	constructor(menu) {
+		this.menu = menu;
+		this.path = menu.querySelectorAll('path');
+		this.numPoints = 10;
+		this.duration = 900;
+		this.delayPointsArray = [];
+		this.delayPointsMax = 300;
+		this.delayPerPath = 250;
+		this.timeStart = Date.now();
+		this.isOpened = false;
+		this.isAnimating = false;
+	}
+	toggle() {
+		this.isAnimating = true;
+		for (var i = 0; i < this.numPoints; i++) {
+			this.delayPointsArray[i] = Math.random() * this.delayPointsMax;
+		}
+		if (this.isOpened === false) {
+			this.open();
+		} else {
+			this.close();
+		}
+	}
+	open() {
+		this.isOpened = true;
+		this.menu.classList.add('is-opened');
+		this.timeStart = Date.now();
+		this.renderLoop();
+	}
+	close() {
+		this.isOpened = false;
+		this.menu.classList.remove('is-opened');
+		this.timeStart = Date.now();
+		this.renderLoop();
+	}
+	updatePath(time) {
+		const points = [];
+		for (var i = 0; i < this.numPoints; i++) {
+			points[i] =
+				(1 -
+					ease.cubicInOut(
+						Math.min(
+							Math.max(time - this.delayPointsArray[i], 0) / this.duration,
+							1,
+						),
+					)) *
+				100;
+		}
+
+		let str = '';
+		str += this.isOpened ? `M 0 0 V ${points[0]}` : `M 0 ${points[0]}`;
+		for (var i = 0; i < this.numPoints - 1; i++) {
+			const p = ((i + 1) / (this.numPoints - 1)) * 100;
+			const cp = p - ((1 / (this.numPoints - 1)) * 100) / 2;
+			str += `C ${cp} ${points[i]} ${cp} ${points[i + 1]} ${p} ${
+				points[i + 1]
+			} `;
+		}
+		str += this.isOpened ? `V 100 H 0` : `V 0 H 0`;
+		return str;
+	}
+	render() {
+		if (this.isOpened) {
+			for (var i = 0; i < this.path.length; i++) {
+				this.path[i].setAttribute(
+					'd',
+					this.updatePath(
+						Date.now() - (this.timeStart + this.delayPerPath * i),
+					),
+				);
+			}
+		} else {
+			for (var i = 0; i < this.path.length; i++) {
+				this.path[i].setAttribute(
+					'd',
+					this.updatePath(
+						Date.now() -
+							(this.timeStart + this.delayPerPath * (this.path.length - i - 1)),
+					),
+				);
+			}
+		}
+	}
+	renderLoop() {
+		this.render();
+		if (
+			Date.now() - this.timeStart <
+			this.duration +
+				this.delayPerPath * (this.path.length - 1) +
+				this.delayPointsMax
+		) {
+			requestAnimationFrame(() => {
+				this.renderLoop();
+			});
+		} else {
+			this.isAnimating = false;
+		}
+	}
+}
+
+
+
+// === === === === === === == Imports == === === === === === ===//
+
+// Store
+import {useMenu, useTheme} from '@/lib/state';
+
+// React
+import useMediaQuery from '@/lib/viewport';
+
+// === === === === === === == Imports == === === === === === ===//
+
+//
+
+// ==================== Render ====================//
+
+//
+// ==================== Ease ====================//
+const ease: MenuOverlays = {
+	exponentialIn: (t) => {
+		return t == 0.0 ? t : Math.pow(2.0, 10.0 * (t - 1.0));
+	},
+	exponentialOut: (t) => {
+		return t == 1.0 ? t : 1.0 - Math.pow(2.0, -10.0 * t);
+	},
+	exponentialInOut: (t) => {
+		return t == 0.0 || t == 1.0
+			? t
+			: t < 0.5
+				? +0.5 * Math.pow(2.0, 20.0 * t - 10.0)
+				: -0.5 * Math.pow(2.0, 10.0 - t * 20.0) + 1.0;
+	},
+	sineOut: (t) => {
+		const HALF_PI = 1.5707963267948966;
+		return Math.sin(t * HALF_PI);
+	},
+	circularInOut: (t) => {
+		return t < 0.5
+			? 0.5 * (1.0 - Math.sqrt(1.0 - 4.0 * t * t))
+			: 0.5 * (Math.sqrt((3.0 - 2.0 * t) * (2.0 * t - 1.0)) + 1.0);
+	},
+	cubicIn: (t) => {
+		return t * t * t;
+	},
+	cubicOut: (t) => {
+		const f = t - 1.0;
+		return f * f * f + 1.0;
+	},
+	cubicInOut: (t) => {
+		return t < 0.5 ? 4.0 * t * t * t : 0.5 * Math.pow(2.0 * t - 2.0, 3.0) + 1.0;
+	},
+	quadraticOut: (t) => {
+		return -t * (t - 2.0);
+	},
+	quarticOut: (t) => {
+		return Math.pow(t - 1.0, 3.0) * (1.0 - t) + 1.0;
+	},
+	t: undefined,
+};
+
+// ==================== Ease ====================//
+
+//
+
+// ==================== Shape Overlays ====================//
+
+export function ShapeOverlays() {
+	return <div>Enter</div>;
+}
+
+// ==================== Shape Overlays ====================//
+
+//
+
+// ==================== Render ====================//
+
+
+
+
+	return (
+		<>
+			<svg
+				className='shape-overlays'
+				viewBox='0 0 100 100'
+				preserveAspectRatio='none'>
+				<defs>
+					<linearGradient
+						id='gradient1'
+						x1='0%'
+						y1='0%'
+						x2='0%'
+						y2='100%'>
+						<stop
+							offset='0%'
+							stopColor='#ef5934'
+						/>
+						<stop
+							offset='100%'
+							stopColor='#ef5934'
+						/>
+					</linearGradient>
+					<linearGradient
+						id='gradient2'
+						x1='0%'
+						y1='0%'
+						x2='0%'
+						y2='100%'>
+						<stop
+							offset='0%'
+							stopColor='#f8a220'
+						/>
+						<stop
+							offset='100%'
+							stopColor='#ef5934'
+						/>
+					</linearGradient>
+					<linearGradient
+						id='gradient3'
+						x1='0%'
+						y1='0%'
+						x2='0%'
+						y2='100%'>
+						<stop
+							offset='0%'
+							stopColor='#215e4a'
+						/>
+						<stop
+							offset='100%'
+							stopColor='#215e4a'
+						/>
+					</linearGradient>
+				</defs>
+				<path className='shape-overlays__path'></path>
+				<path className='shape-overlays__path'></path>
+				<path className='shape-overlays__path'></path>
+			</svg>
+		</>
+	);
+}
+// ==================== Render ====================//
+
+// const menuIcon = document.querySelector('.menuIcon');
+// const gNavItems = document.querySelectorAll('.global-menu__item');
+// const menuOverlay = document.querySelector('.shape-overlays');
+// const overlay = new ShapeOverlays(menuOverlay);
+
+// 			if (menuIcon) {
+// 		menuIcon.addEventListener('click', () => {
+// 			if (overlay.isAnimating) {
+// 				return false;
+// 			}
+// 			overlay.toggle();
+// 			if (overlay.isOpened === true) {
+// 				menuIcon.classList.add('open');
+// 				for (var i = 0; i < gNavItems.length; i++) {
+// 					gNavItems[i].classList.add('is-opened');
+// 				}
+// 			} else {
+// 				menuIcon.classList.remove('open');
+// 				for (var i = 0; i < gNavItems.length; i++) {
+// 					gNavItems[i].classList.remove('is-opened');
+// 				}
+// 			}
+// 		});
+
+
+
+
+
+// ==================== Ease ====================//
+
+import {useMenu} from '@/lib/state';
+
+export const ease = {
+	exponentialIn: (t: number) => {
+		return t == 0.0 ? t : Math.pow(2.0, 10.0 * (t - 1.0));
+	},
+	exponentialOut: (t: number) => {
+		return t == 1.0 ? t : 1.0 - Math.pow(2.0, -10.0 * t);
+	},
+	exponentialInOut: (t: number) => {
+		return t == 0.0 || t == 1.0
+			? t
+			: t < 0.5
+				? +0.5 * Math.pow(2.0, 20.0 * t - 10.0)
+				: -0.5 * Math.pow(2.0, 10.0 - t * 20.0) + 1.0;
+	},
+	sineOut: (t: number) => {
+		const HALF_PI = 1.5707963267948966;
+		return Math.sin(t * HALF_PI);
+	},
+	circularInOut: (t: number) => {
+		return t < 0.5
+			? 0.5 * (1.0 - Math.sqrt(1.0 - 4.0 * t * t))
+			: 0.5 * (Math.sqrt((3.0 - 2.0 * t) * (2.0 * t - 1.0)) + 1.0);
+	},
+	cubicIn: (t: number) => {
+		return t * t * t;
+	},
+	cubicOut: (t: number) => {
+		const f = t - 1.0;
+		return f * f * f + 1.0;
+	},
+	cubicInOut: (t: number) => {
+		return t < 0.5 ? 4.0 * t * t * t : 0.5 * Math.pow(2.0 * t - 2.0, 3.0) + 1.0;
+	},
+	quadraticOut: (t: number) => {
+		return -t * (t - 2.0);
+	},
+	quarticOut: (t: number) => {
+		return Math.pow(t - 1.0, 3.0) * (1.0 - t) + 1.0;
+	},
+};
+// ==================== Ease ====================//
+//
+
+class ShapeOverlays {
+	menu = useMenu();
+    path: any;
+    numPoints: number;
+    duration: number;
+    delayPointsArray: never[];
+    delayPointsMax: number;
+    delayPerPath: number;
+    timeStart: number;
+    isOpened: boolean;
+    isAnimating: boolean;
+	constructor({menu}: any) {
+		this.menu = menu;
+		this.path = menu.querySelectorAll('path');
+		this.numPoints = 10;
+		this.duration = 900;
+		this.delayPointsArray = [];
+		this.delayPointsMax = 300;
+		this.delayPerPath = 250;
+		this.timeStart = Date.now();
+		this.isOpened = false;
+		this.isAnimating = false;
+	}
+	toggle() {
+		this.isAnimating = true;
+		for (var i = 0; i < this.numPoints; i++) {
+			this.delayPointsArray[i] = Math.random() * this.delayPointsMax;
+		}
+		if (this.isOpened === false) {
+			this.open();
+		} else {
+			this.close();
+		}
+	}
+	open() {
+		this.isOpened = true;
+		this.menu.classList.add('is-opened');
+		this.timeStart = Date.now();
+		this.renderLoop();
+	}
+	close() {
+		this.isOpened = false;
+		this.menu.classList.remove('is-opened');
+		this.timeStart = Date.now();
+		this.renderLoop();
+	}
+	updatePath(time: number) {
+		const points = [];
+		for (var i = 0; i < this.numPoints; i++) {
+			points[i] =
+				(1 -
+					ease.cubicInOut(
+						Math.min(
+							Math.max(time - this.delayPointsArray[i], 0) / this.duration,
+							1,
+						),
+					)) *
+				100;
+		}
+
+		let str = '';
+		str += this.isOpened ? `M 0 0 V ${points[0]}` : `M 0 ${points[0]}`;
+		for (var i = 0; i < this.numPoints - 1; i++) {
+			const p = ((i + 1) / (this.numPoints - 1)) * 100;
+			const cp = p - ((1 / (this.numPoints - 1)) * 100) / 2;
+			str += `C ${cp} ${points[i]} ${cp} ${points[i + 1]} ${p} ${
+				points[i + 1]
+			} `;
+		}
+		str += this.isOpened ? `V 100 H 0` : `V 0 H 0`;
+		return str;
+	}
+	render() {
+		if (this.isOpened) {
+			for (var i = 0; i < this.path.length; i++) {
+				this.path[i].setAttribute(
+					'd',
+					this.updatePath(
+						Date.now() - (this.timeStart + this.delayPerPath * i),
+					),
+				);
+			}
+		} else {
+			for (var i = 0; i < this.path.length; i++) {
+				this.path[i].setAttribute(
+					'd',
+					this.updatePath(
+						Date.now() -
+							(this.timeStart + this.delayPerPath * (this.path.length - i - 1)),
+					),
+				);
+			}
+		}
+	}
+	renderLoop() {
+		this.render();
+		if (
+			Date.now() - this.timeStart <
+			this.duration +
+				this.delayPerPath * (this.path.length - 1) +
+				this.delayPointsMax
+		) {
+			requestAnimationFrame(() => {
+				this.renderLoop();
+			});
+		} else {
+			this.isAnimating = false;
+		}
+	}
+}
+
+(function () {
+	const menuIcon = document.querySelector('.menuIcon');
+	const gNavItems = document.querySelectorAll('.global-menu__item');
+	const menuOverlay = document.querySelector('.shape-overlays');
+	const overlay = new ShapeOverlays(menuOverlay);
+
+	if (menuIcon) {
+		menuIcon.addEventListener('click', () => {
+			if (overlay.isAnimating) {
+				return false;
+			}
+			overlay.toggle();
+			if (overlay.isOpened === true) {
+				menuIcon.classList.add('open');
+				for (var i = 0; i < gNavItems.length; i++) {
+					gNavItems[i].classList.add('is-opened');
+				}
+			} else {
+				menuIcon.classList.remove('open');
+				for (var i = 0; i < gNavItems.length; i++) {
+					gNavItems[i].classList.remove('is-opened');
+				}
+			}
+		});
+	}
+})();
+
+
+
+
+
+
+
+[data-v-ff5deb08]:root {
+    --color-black: #191919;
+    --color-burnedOrange: #ff6b00;
+    --color-darkGrey: #646464;
+    --color-green: #49d571;
+    --color-lightGrey: #e6e6e6;
+    --color-midGrey: #a0a0a0;
+    --color-offBlack: #282828;
+    --color-orange: #ff7714;
+    --color-offWhite: #fdfdfd;
+    --color-paperGrey: #f2f2f2;
+    --color-white: #fff;
+    --ease-cubicOut: cubic-bezier(.215,.61,.355,1);
+    --font-base: "TT Interphases Pro";
+    --font-mono: "TT Interphases Pro Mono";
+    --borderRadius: .4rem;
+    --grid-outerGutter: 2.6595744681vw;
+    --grid-columnCount: 1
+}
+
+
+
+
+
+
